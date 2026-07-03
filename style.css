@@ -1551,14 +1551,19 @@ body {
     }
 }
 
-/* AJUSTE DESKTOP NORMAL - PÁGINA 2 */
+/* RESET DESKTOP NORMAL - PÁGINA 2 */
 @media (min-width: 1025px) and (max-width: 1399px) {
 
     .para-cat {
-        top: 24% !important;
+        width: 360px !important;
+        left: 13% !important;
+        top: 23% !important;
     }
 
     .blob-message {
-        top: 3% !important;
+        width: 1180px !important;
+        height: 820px !important;
+        right: -2% !important;
+        top: 2% !important;
     }
 }
