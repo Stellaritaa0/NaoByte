@@ -1427,8 +1427,26 @@ body {
 /* AJUSTE MONITOR GRANDE - PÁGE 1 */
 @media (min-width: 1400px) {
 
+    /* Texto más grande y un poco más a la izquierda */
+    .hero-text {
+        left: -2% !important;
+        top: 56% !important;
+        max-width: 560px !important;
+    }
+
+    .hero-text h1 {
+        font-size: 125px !important;
+    }
+
+    .hero-text p {
+        font-size: 24px !important;
+        line-height: 1.45 !important;
+        max-width: 520px !important;
+    }
+
     /* Bajamos un poco el gatito */
     .hero-cat {
+        width: 600px !important;
         transform: translateY(55px) !important;
     }
 
