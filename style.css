@@ -1458,12 +1458,12 @@ body {
     }
 
     .para-cat {
-        width: 400px;
-        top: 30%;
+        width: 420px;
+        top: 20;
     }
 
     .blob-message {
-        top: 11%;
+        top: 15%;
     }
 
 }
