@@ -1424,10 +1424,9 @@ body {
     }
 }
 
-/* AJUSTE MONITOR GRANDE - PÁGE 1 */
+/* AJUSTE MONITOR GRANDE - SOLO PÁGINA 1 */
 @media (min-width: 1400px) {
 
-    /* Texto más grande y un poco más a la izquierda */
     .hero-text {
         left: -3% !important;
         top: 56% !important;
@@ -1444,126 +1443,32 @@ body {
         max-width: 520px !important;
     }
 
-    /* Bajamos un poco el gatito */
     .hero-cat {
         width: 540px !important;
         transform: translateX(30px) translateY(55px) !important;
     }
 
-    /* Bajamos la figura blanca derecha */
     .decoracion-derecha {
         width: 750px !important;
         top: -4% !important;
         right: 0px !important;
     }
-
-    .para-cat {
-        width: 420px;
-        top: 20;
-    }
-
-    .blob-message {
-        top: 15%;
-    }
-}
-   
-    /* RESET DESKTOP - PÁGINA 1 */
-@media (min-width: 1025px) {
-
-    .hero-text {
-        position: absolute !important;
-        left: 1% !important;
-        top: 56% !important;
-        transform: translateY(-50%) !important;
-        max-width: 430px !important;
-    }
-
-    .hero-text h1 {
-        font-size: 110px !important;
-    }
-
-    .hero-text p {
-        font-size: 21px !important;
-        line-height: 1.45 !important;
-        max-width: 430px !important;
-    }
-
-    .hero-cat {
-        position: absolute !important;
-        right: 10% !important;
-        top: 10% !important;
-        width: 520px !important;
-        transform: none !important;
-    }
-
-    .decoracion-derecha {
-        width: 625px !important;
-        right: 4px !important;
-        top: -43px !important;
-    }
-
-    .decoracion-izquierda {
-        width: 300px !important;
-        left: 1px !important;
-        top: 15% !important;
-    }
 }
 
-/* RESET DESKTOP - PÁGINA 1 */
-@media (min-width: 1025px) {
 
-    .hero-text {
-        position: absolute !important;
-        left: 1% !important;
-        top: 56% !important;
-        transform: translateY(-50%) !important;
-        max-width: 430px !important;
-    }
-
-    .hero-text h1 {
-        font-size: 110px !important;
-    }
-
-    .hero-text p {
-        font-size: 21px !important;
-        line-height: 1.45 !important;
-        max-width: 430px !important;
-    }
-
-    .hero-cat {
-        position: absolute !important;
-        right: 10% !important;
-        top: 10% !important;
-        width: 520px !important;
-        transform: none !important;
-    }
-
-    .decoracion-derecha {
-        width: 625px !important;
-        right: 4px !important;
-        top: -43px !important;
-    }
-
-    .decoracion-izquierda {
-        width: 300px !important;
-        left: 1px !important;
-        top: 15% !important;
-    }
-}
-
-/* RESET DESKTOP NORMAL - PÁGINA 2 */
+/* AJUSTE DESKTOP NORMAL - SOLO PÁGINA 2 */
 @media (min-width: 1025px) and (max-width: 1399px) {
 
     .para-cat {
         width: 360px !important;
         left: 13% !important;
-        top: 23% !important;
+        top: 20% !important;
     }
 
     .blob-message {
         width: 1180px !important;
         height: 820px !important;
         right: -2% !important;
-        top: 2% !important;
+        top: -3% !important;
     }
 }
