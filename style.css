@@ -1429,11 +1429,11 @@ body {
 
     /* Bajamos un poco el gatito */
     .hero-cat {
-        transform: translateY(45px) !important;
+        transform: translateY(55px) !important;
     }
 
     /* Bajamos la figura blanca derecha */
     .decoracion-derecha {
-        top: 16% !important;
+        top: 12% !important;
     }
 }
