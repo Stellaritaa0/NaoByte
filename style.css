@@ -1424,34 +1424,75 @@ body {
     }
 }
 
-/* AJUSTE MONITOR GRANDE - SOLO PÁGINA 1 */
-@media (min-width: 1400px) {
+/* ESTABILIZAR PÁGINA 1 - DESKTOP Y PC GRANDE */
+@media (min-width: 1025px) {
 
     .hero-text {
-        left: -3% !important;
+        position: absolute !important;
+        left: 1% !important;
         top: 56% !important;
-        max-width: 560px !important;
+        transform: translateY(-50%) !important;
+        max-width: 430px !important;
     }
 
     .hero-text h1 {
-        font-size: 125px !important;
+        font-size: 110px !important;
     }
 
     .hero-text p {
-        font-size: 24px !important;
+        font-size: 21px !important;
         line-height: 1.45 !important;
-        max-width: 520px !important;
+        max-width: 430px !important;
     }
 
     .hero-cat {
-        width: 540px !important;
-        transform: translateX(30px) translateY(55px) !important;
+        position: absolute !important;
+        right: 10% !important;
+        top: 10% !important;
+        width: 520px !important;
+        transform: none !important;
     }
 
     .decoracion-derecha {
-        width: 750px !important;
-        top: -4% !important;
-        right: 0px !important;
+        width: 625px !important;
+        right: 4px !important;
+        top: -43px !important;
+    }
+
+    .decoracion-izquierda {
+        width: 300px !important;
+        left: 1px !important;
+        top: 15% !important;
+    }
+}
+
+/* AJUSTES SUAVES SOLO PC GRANDE - PÁGINA 1 */
+@media (min-width: 1400px) {
+
+    .hero-text {
+        left: 0% !important;
+    }
+
+    .hero-text h1 {
+        font-size: 118px !important;
+    }
+
+    .hero-text p {
+        font-size: 22px !important;
+        max-width: 460px !important;
+    }
+
+    .hero-cat {
+        width: 550px !important;
+        top: 13% !important;
+        right: 9% !important;
+        transform: none !important;
+    }
+
+    .decoracion-derecha {
+        width: 680px !important;
+        top: -30px !important;
+        right: -25px !important;
     }
 }
 
