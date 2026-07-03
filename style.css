@@ -1435,7 +1435,7 @@ body {
     /* Bajamos la figura blanca derecha */
     .decoracion-derecha {
         width: 750px !important;
-        top: 1% !important;
+        top: -4% !important;
         right: -60px !important;
     }
 }
