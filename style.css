@@ -1429,7 +1429,7 @@ body {
 
     /* Texto más grande y un poco más a la izquierda */
     .hero-text {
-        left: -4% !important;
+        left: 0% !important;
         top: 56% !important;
         max-width: 560px !important;
     }
@@ -1447,7 +1447,7 @@ body {
     /* Bajamos un poco el gatito */
     .hero-cat {
         width: 540px !important;
-        transform: translateY(55px) !important;
+        transform: translateX(30px) translateY(55px) !important;
     }
 
     /* Bajamos la figura blanca derecha */
