@@ -1550,3 +1550,15 @@ body {
         top: 15% !important;
     }
 }
+
+/* AJUSTE DESKTOP NORMAL - PÁGINA 2 */
+@media (min-width: 1025px) and (max-width: 1399px) {
+
+    .para-cat {
+        top: 24% !important;
+    }
+
+    .blob-message {
+        top: 3% !important;
+    }
+}
