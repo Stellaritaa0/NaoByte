@@ -1446,7 +1446,7 @@ body {
 
     /* Bajamos un poco el gatito */
     .hero-cat {
-        width: 600px !important;
+        width: 500px !important;
         transform: translateY(55px) !important;
     }
 
