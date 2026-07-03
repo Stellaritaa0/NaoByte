@@ -1423,3 +1423,17 @@ body {
         letter-spacing: 0.2px !important;
     }
 }
+
+/* AJUSTE MONITOR GRANDE - PÁGE 1 */
+@media (min-width: 1400px) {
+
+    /* Bajamos un poco el gatito */
+    .hero-cat {
+        transform: translateY(45px) !important;
+    }
+
+    /* Bajamos la figura blanca derecha */
+    .decoracion-derecha {
+        top: 16% !important;
+    }
+}
