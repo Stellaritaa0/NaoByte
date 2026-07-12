@@ -51,7 +51,8 @@ if (carrusel && carruselCards.length > 0) {
 
     let radius = getCarruselRadius();
     let rotation = 0;
-    let autoSpeed = -0.18;
+    let autoSpeed = -11; 
+    let lastTime = null;
 
     let isDragging = false;
     let lastMouseX = 0;
@@ -80,9 +81,16 @@ if (carrusel && carruselCards.length > 0) {
         updateCarrusel();
     });
 
-    function animateCarrusel() {
+    function animateCarrusel(timestamp) {
+        if (lastTime === null) {
+            lastTime = timestamp;
+        }
+
+        const deltaTime = (timestamp - lastTime) / 1000;
+        lastTime = timestamp;
+
         if (!isDragging) {
-            rotation += autoSpeed;
+            rotation += autoSpeed * deltaTime;
             updateCarrusel();
         }
 
