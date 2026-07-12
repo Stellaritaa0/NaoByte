@@ -149,7 +149,7 @@ if (carrusel && carruselCards.length > 0) {
     });
 
     updateCarrusel();
-    animateCarrusel();
+    requestAnimationFrame(animateCarrusel);
 }
 
 
