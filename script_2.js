@@ -2,117 +2,83 @@ if ("scrollRestoration" in history) {
     history.scrollRestoration = "auto";
 }
 
+/* CARTA */
 const envoltura = document.querySelector(".envoltura-sobre");
 const carta = document.querySelector(".carta");
 
-document.addEventListener("click", (e) => {
-    if (e.target.matches(".sobre") || 
-        e.target.matches(".solapa-derecha") ||
-        e.target.matches(".solapa-izquierda") ||
-        e.target.matches(".corazon")) {
-        envoltura.classList.toggle("abierto");
-      
-    } else if (e.target.matches(".sobre *")) {
-        if (!carta.classList.contains("abierta")) {
-            carta.classList.add("mostrar-carta");
+if (envoltura && carta) {
+    document.addEventListener("click", (e) => {
+        if (
+            e.target.matches(".sobre") ||
+            e.target.matches(".solapa-derecha") ||
+            e.target.matches(".solapa-izquierda") ||
+            e.target.matches(".corazon")
+        ) {
+            envoltura.classList.toggle("abierto");
 
-            setTimeout(() => {
-                carta.classList.remove("mostrar-carta");
-                carta.classList.add("abierta");
-            }, 500);
-            envoltura.classList.add("desactivar-sobre")
-        } else {
-            carta.classList.add("cerrando-carta");
-            envoltura.classList.remove("desactivar-sobre");
+        } else if (e.target.matches(".sobre *")) {
+            if (!carta.classList.contains("abierta")) {
+                carta.classList.add("mostrar-carta");
 
-            setTimeout(() => {
-                carta.classList.remove("cerrando-carta")
-                carta.classList.remove("abierta")
-            }, 500);
+                setTimeout(() => {
+                    carta.classList.remove("mostrar-carta");
+                    carta.classList.add("abierta");
+                }, 500);
+
+                envoltura.classList.add("desactivar-sobre");
+
+            } else {
+                carta.classList.add("cerrando-carta");
+                envoltura.classList.remove("desactivar-sobre");
+
+                setTimeout(() => {
+                    carta.classList.remove("cerrando-carta");
+                    carta.classList.remove("abierta");
+                }, 500);
+            }
         }
-
-    } 
-})
-
-/* carrusel*/
-const carrusel = document.querySelector(".carrusel-container");
-const carruselCards = document.querySelectorAll(".carrusel-tarjeta");
-
-if ("scrollRestoration" in history) {
-    history.scrollRestoration = "auto";
+    });
 }
 
-const envoltura = document.querySelector(".envoltura-sobre");
-const carta = document.querySelector(".carta");
 
-document.addEventListener("click", (e) => {
-    if (e.target.matches(".sobre") || 
-        e.target.matches(".solapa-derecha") ||
-        e.target.matches(".solapa-izquierda") ||
-        e.target.matches(".corazon")) {
-        envoltura.classList.toggle("abierto");
-      
-    } else if (e.target.matches(".sobre *")) {
-        if (!carta.classList.contains("abierta")) {
-            carta.classList.add("mostrar-carta");
-
-            setTimeout(() => {
-                carta.classList.remove("mostrar-carta");
-                carta.classList.add("abierta");
-            }, 500);
-            envoltura.classList.add("desactivar-sobre")
-        } else {
-            carta.classList.add("cerrando-carta");
-            envoltura.classList.remove("desactivar-sobre");
-
-            setTimeout(() => {
-                carta.classList.remove("cerrando-carta")
-                carta.classList.remove("abierta")
-            }, 500);
-        }
-
-    } 
-})
-
-/* carrusel*/
+/* CARRUSEL */
 const carrusel = document.querySelector(".carrusel-container");
 const carruselCards = document.querySelectorAll(".carrusel-tarjeta");
 
 if (carrusel && carruselCards.length > 0) {
     const totalCards = carruselCards.length;
-const angleStep = 360 / totalCards;
+    const angleStep = 360 / totalCards;
 
-let radius = getCarruselRadius();
-
-function getCarruselRadius() {
-    if (window.innerWidth <= 768) {
-        return 350;
-    }
-
-    if (window.innerWidth <= 1024) {
-        return 380;
-    }
-
-    return Math.min(Math.max(window.innerWidth * 0.25, 430), 560);
-}
+    let radius = getCarruselRadius();
     let rotation = 0;
     let autoSpeed = -0.18;
 
     let isDragging = false;
     let lastMouseX = 0;
 
+    function getCarruselRadius() {
+        if (window.innerWidth <= 768) {
+            return 350;
+        }
+
+        if (window.innerWidth <= 1024) {
+            return 380;
+        }
+
+        return 520;
+    }
+
     function updateCarrusel() {
         carruselCards.forEach((card, index) => {
             const angle = rotation + index * angleStep;
-
             card.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
         });
     }
 
     window.addEventListener("resize", () => {
-    radius = getCarruselRadius();
-    updateCarrusel();
-});
+        radius = getCarruselRadius();
+        updateCarrusel();
+    });
 
     function animateCarrusel() {
         if (!isDragging) {
@@ -136,9 +102,7 @@ function getCarruselRadius() {
         if (!isDragging) return;
 
         const movement = event.clientX - lastMouseX;
-
         rotation += movement * 0.35;
-
         lastMouseX = event.clientX;
 
         updateCarrusel();
@@ -160,9 +124,7 @@ function getCarruselRadius() {
         if (!isDragging) return;
 
         const movement = event.touches[0].clientX - lastMouseX;
-
         rotation += movement * 0.28;
-
         lastMouseX = event.touches[0].clientX;
 
         updateCarrusel();
@@ -182,7 +144,8 @@ function getCarruselRadius() {
     animateCarrusel();
 }
 
-/* BUTTON */
+
+/* BUTTON - LLUVIA DE HAMBURGUESAS */
 const logoButton = document.querySelector(".logo-button");
 
 if (logoButton) {
@@ -214,7 +177,8 @@ function createBurgerRain() {
     }
 }
 
-/* Mejoras menú */
+
+/* MENÚ ACTIVO */
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".navbar a");
 
@@ -243,7 +207,8 @@ sections.forEach((section) => {
     sectionObserver.observe(section);
 });
 
-/* Arreglitos */
+
+/* ANIMACIÓN AL SCROLL */
 const revealElements = document.querySelectorAll(`
     .para-cat,
     .blob-message,
@@ -273,7 +238,8 @@ revealElements.forEach((element) => {
     revealObserver.observe(element);
 });
 
-/* Arreglos scroll */
+
+/* SCROLL POR SECCIONES */
 const pageSections = Array.from(document.querySelectorAll(
     "#inicio, #para-ti, #carta, #carrusel"
 ));

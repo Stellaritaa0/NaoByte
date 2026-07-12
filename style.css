@@ -1461,23 +1461,23 @@ body {
     }
 
 
-    /* CARRUSEL */
-    .carrusel-container {
-        --card-w: clamp(180px, 12vw, 230px);
-        --card-h: clamp(260px, 18vw, 330px);
+/* CARRUSEL */
+.carrusel-container {
+    --card-w: 180px;
+    --card-h: 260px;
 
-        width: clamp(600px, 45vw, 800px);
-        height: clamp(380px, 29vw, 520px);
-        transform: translateY(-20px);
-    }
+    width: 600px !important;
+    height: 380px !important;
+    transform: translateY(-20px) !important;
+}
 
-    .carrusel-tarjeta {
-        width: var(--card-w);
-        height: var(--card-h);
+.carrusel-tarjeta {
+    width: var(--card-w) !important;
+    height: var(--card-h) !important;
 
-        top: calc((100% - var(--card-h)) / 2);
-        left: calc((100% - var(--card-w)) / 2);
-    }
+    top: calc((100% - var(--card-h)) / 2) !important;
+    left: calc((100% - var(--card-w)) / 2) !important;
+}
 }
 
 /* AJUSTE SOLO PC GRANDE - INICIO */
