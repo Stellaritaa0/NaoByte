@@ -1479,3 +1479,16 @@ body {
         left: calc((100% - var(--card-w)) / 2);
     }
 }
+
+/* AJUSTE SOLO PC GRANDE - INICIO */
+@media (min-width: 1400px) {
+
+    .hero-text {
+        margin-left: 130px !important;
+        left: 0% !important;
+    }
+
+    .hero-cat {
+        right: 5% !important;
+    }
+}
