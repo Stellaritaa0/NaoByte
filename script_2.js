@@ -65,7 +65,7 @@ if (carrusel && carruselCards.length > 0) {
             return 380;
         }
 
-        return 520;
+        return 500;
     }
 
     function updateCarrusel() {
