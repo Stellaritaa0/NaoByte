@@ -51,7 +51,7 @@ if (carrusel && carruselCards.length > 0) {
 
     let radius = getCarruselRadius();
     let rotation = 0;
-    let autoSpeed = -11; 
+    let autoSpeed = -9; 
     let lastTime = null;
 
     let isDragging = false;
